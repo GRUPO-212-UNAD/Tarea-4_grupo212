@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 import logging
 
-# Configuración de logs (puedes dejarla aquí o en logger del compañero)
 logging.basicConfig(
     filename="sistema.log",
     level=logging.ERROR,
