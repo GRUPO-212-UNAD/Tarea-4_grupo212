@@ -9,6 +9,7 @@
 # IMPORTACIONES NECESARIAS
 from servicio_base import Servicio
 from excepciones import ErrorValidacion
+from logger import registrar_error
 
 
 # =========================
@@ -20,13 +21,20 @@ class ReservaSala(Servicio):
         super().__init__(codigo, nombre, precio, disponible)
 
     def calcular_costo(self, horas, tarifa=50):
-        if not self.disponible:
-            raise ErrorValidacion("Servicio no disponible")
+        try:
+            if not self.disponible:
+                registrar_error("ReservaSala: servicio no disponible")
+                raise ErrorValidacion("Servicio no disponible")
 
-        if horas <= 0:
-            raise ErrorValidacion("Horas inválidas para reserva de sala")
+            if horas <= 0:
+                registrar_error("ReservaSala: horas inválidas")
+                raise ErrorValidacion("Horas inválidas para reserva de sala")
 
-        return horas * tarifa
+            return horas * tarifa
+
+        except Exception as e:
+            registrar_error(f"Error en ReservaSala.calcular_costo: {e}")
+            raise
 
     def descripcion(self):
         return f"Servicio: {self.nombre} - Reserva de sala por horas"
@@ -41,13 +49,20 @@ class AlquilerEquipo(Servicio):
         super().__init__(codigo, nombre, precio, disponible)
 
     def calcular_costo(self, dias, tarifa=30):
-        if not self.disponible:
-            raise ErrorValidacion("Servicio no disponible")
+        try:
+            if not self.disponible:
+                registrar_error("AlquilerEquipo: servicio no disponible")
+                raise ErrorValidacion("Servicio no disponible")
 
-        if dias <= 0:
-            raise ErrorValidacion("Días inválidos para alquiler de equipo")
+            if dias <= 0:
+                registrar_error("AlquilerEquipo: días inválidos")
+                raise ErrorValidacion("Días inválidos para alquiler de equipo")
 
-        return dias * tarifa
+            return dias * tarifa
+
+        except Exception as e:
+            registrar_error(f"Error en AlquilerEquipo.calcular_costo: {e}")
+            raise
 
     def descripcion(self):
         return f"Servicio: {self.nombre} - Alquiler de equipos"
@@ -62,15 +77,28 @@ class AsesoriaEspecializada(Servicio):
         super().__init__(codigo, nombre, precio, disponible)
 
     def calcular_costo(self, horas, tarifa=100, descuento=0.1):
-        if not self.disponible:
-            raise ErrorValidacion("Servicio no disponible")
+        try:
+            if not self.disponible:
+                registrar_error("Asesoria: servicio no disponible")
+                raise ErrorValidacion("Servicio no disponible")
 
-        if horas <= 0:
-            raise ErrorValidacion("Horas inválidas en asesoría")
+            if horas <= 0:
+                registrar_error("Asesoria: horas inválidas")
+                raise ErrorValidacion("Horas inválidas en asesoría")
 
-        if not (0 <= descuento <= 1):
-            raise ErrorValidacion("Descuento inválido")
+            if not (0 <= descuento <= 1):
+                registrar_error("Asesoria: descuento inválido")
+                raise ErrorValidacion("Descuento inválido")
 
+            total = horas * tarifa
+            return total - (total * descuento)
+
+        except Exception as e:
+            registrar_error(f"Error en AsesoriaEspecializada.calcular_costo: {e}")
+            raise
+
+    def descripcion(self):
+        return f"Servicio: {self.nombre} - Asesoría especializada"
         total = horas * tarifa
         return total - (total * descuento)
 
