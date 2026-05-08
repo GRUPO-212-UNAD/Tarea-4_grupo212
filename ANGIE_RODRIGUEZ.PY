@@ -1,12 +1,5 @@
 from abc import ABC, abstractmethod
-import logging
-
-# Configuración de logs 
-logging.basicConfig(
-    filename="sistema.log",
-    level=logging.ERROR,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
+import logger
 
 
 # ===== EXCEPCIONES =====
@@ -39,7 +32,7 @@ class Servicio(ABC):
             self.__disponible = disponible
 
         except Exception as e:
-            logging.error(f"Error al crear servicio: {e}")
+            logger.registrar_error(f"Error al crear servicio: {e}")
             raise
 
     # ===== GETTERS =====
