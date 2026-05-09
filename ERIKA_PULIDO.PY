@@ -4,7 +4,7 @@ from datetime import datetime
 
 # Importar logger
 
-from logger import logger
+import logger
 
 
 # ---- EXCEPCIONES ---
@@ -35,20 +35,30 @@ class Reserva:
             if not self.servicio.disponible:
               raise ServicioNoDisponible( "El servicio no se encuentra disponible")
             
+            #cambia el estado de la reserva
+
             self.estado="confirmada"
             self.servicio.disponible=False
-            print("La reserva fue confirmada de manera correcta")
+         
 
-            #Registrar log
-            logger.registrar_log(
-                  f"Reserva {self.id_reserva} confirmada"
-                  )
+          
 
         except ServicioNoDisponible as e:
-           print("Error:",e)
+            print("Error:",e)
+         
+        else:
+           
+           # Realizara la ejecución si no hubo errores 
+           print("La reserva fue confirmada correctamente")
+
+           #Registrar log
+           logger.registrar_evento(
+               f"Reserva {self.id_reserva} confirmada"
+                  ) 
+
          
         finally:
-           print("El proceso ha culminado")
+             print("El proceso ha culminado")
    def mostrar (self):
       print(f"""
           ID Reserva:{self.id_reserva}
