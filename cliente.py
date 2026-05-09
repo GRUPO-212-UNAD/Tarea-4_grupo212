@@ -26,7 +26,7 @@ class Cliente(Entidad):
             self.__correo = correo.strip()
 
         except Exception as e:
-            self.registrar_error(e)
+            logger.registrar_error(f"Error en Cliente: {str(e)}")
             raise
 
     # Getter ID
@@ -65,4 +65,4 @@ class Cliente(Entidad):
 
     # Mostrar info
     def mostrar_info(self):
-        return f"Cliente ID: {self._id} | Nombre: {self.__nombre} | Correo: {self.__correo}" 
+        return f"Cliente ID: {self._id} | Nombre: {self.__nombre} | Correo: {self.__correo}"
