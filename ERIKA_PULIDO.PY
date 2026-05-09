@@ -7,7 +7,6 @@ from datetime import datetime
 from logger import logger
 
 
-
 # ---- EXCEPCIONES ---
 
 class ReservaError(Exception):
