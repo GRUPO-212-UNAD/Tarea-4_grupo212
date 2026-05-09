@@ -1,3 +1,5 @@
+import logger
+
 # Clase base (simula la clase abstracta Entidad)
 class Entidad:
     def __init__(self, id):
@@ -44,6 +46,8 @@ class Cliente(Entidad):
         except Exception as e:
             self.registrar_error(e)
             raise
+        finally:
+            print("Intento de actualización de nombre realizado")
 
     # Getter correo
     def get_correo(self):
@@ -61,12 +65,4 @@ class Cliente(Entidad):
 
     # Mostrar info
     def mostrar_info(self):
-        return f"Cliente ID: {self._id} | Nombre: {self.__nombre} | Correo: {self.__correo}"
-
-    # Log de errores
-    def registrar_error(self, error):
-        try:
-            with open("logs.txt", "a") as archivo:
-                archivo.write(f"Error en Cliente: {str(error)}\n")
-        except:
-            print("No se pudo guardar el error en el log")
+        return f"Cliente ID: {self._id} | Nombre: {self.__nombre} | Correo: {self.__correo}" 
