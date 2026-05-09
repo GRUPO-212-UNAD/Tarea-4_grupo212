@@ -99,8 +99,3 @@ class AsesoriaEspecializada(Servicio):
 
     def descripcion(self):
         return f"Servicio: {self.nombre} - Asesoría especializada"
-        total = horas * tarifa
-        return total - (total * descuento)
-
-    def descripcion(self):
-        return f"Servicio: {self.nombre} - Asesoría especializada"
