@@ -18,7 +18,7 @@ class EstadoInvalidoError(ReservaError):
 
 
 class Reserva:
-   contador=1
+   contador = 1
 
    def __init__(self,cliente,servicio,duracion):
       self.id_reserva=Reserva.contador
