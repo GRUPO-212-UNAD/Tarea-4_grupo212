@@ -44,7 +44,7 @@ class Cliente(Entidad):
                 raise ValueError("El nombre no puede estar vacío")
             self.__nombre = nombre.strip()
         except Exception as e:
-            self.registrar_error(e)
+            logger.registrar_error(f"Error en Cliente: {str(e)}")
             raise
         finally:
             print("Intento de actualización de nombre realizado")
@@ -60,7 +60,7 @@ class Cliente(Entidad):
                 raise ValueError("Correo electrónico inválido")
             self.__correo = correo.strip()
         except Exception as e:
-            self.registrar_error(e)
+            logger.registrar_error(f"Error en Cliente: {str(e)}")
             raise
 
     # Mostrar info
