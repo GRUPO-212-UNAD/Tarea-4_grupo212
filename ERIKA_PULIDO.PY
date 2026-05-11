@@ -32,13 +32,13 @@ class Reserva:
 
    def confirmar(self):
         try:
-            if not self.servicio.disponible:
+            if not self.servicio.esta_disponible():
               raise ServicioNoDisponible( "El servicio no se encuentra disponible")
             
             #cambia el estado de la reserva
 
             self.estado="confirmada"
-            self.servicio.disponible=False
+            self.servicio.set_disponible(False)
          
 
           
@@ -62,7 +62,7 @@ class Reserva:
    def mostrar (self):
       print(f"""
           ID Reserva:{self.id_reserva}
-           Cliente :{self.cliente.nombre}
+           Cliente :{self.cliente.get_nombre()}
            Servicio:{self.servicio.nombre}
            Duración:{self.duracion}
            Estado:{self.estado}
