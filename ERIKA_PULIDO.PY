@@ -1,11 +1,11 @@
-from abc import ABC,abstractmethod
+
 from datetime import datetime
 
-# Registro de datos  automatico 
 
-def registar_long(texto):
-    with open('logs.txt','a',ecoding='utf-8')as f:
-     f.write(f"[{datetime.now().strftime('%y-%m-%d %H:%M:%S')}]{texto}\n")
+# Importar logger
+
+import logger
+
 
 # ---- EXCEPCIONES ---
 
@@ -20,27 +20,64 @@ class EstadoInvalidoError(ReservaError):
 class Reserva:
    contador = 1
 
-   def __init__(self,cliente,servcio,duracion):
+   def __init__(self,cliente,servicio,duracion):
       self.id_reserva=Reserva.contador
       Reserva.contador +=1
 
       self.cliente=cliente
-      self.servicio=servcio
+      self.servicio=servicio
       self.duracion=duracion
       self.fecha=datetime.now()
       self.estado="pendiente"
 
-   def comfirmar(self):
+   def confirmar(self):
         try:
-            if not self.servicio.disponble:
-              raise ServicioNoDisponible( "El servicio no se encuentra dosponible")
+            if not self.servicio.disponible:
+              raise ServicioNoDisponible( "El servicio no se encuentra disponible")
             
-            self.estado="comfirmada"
+            #cambia el estado de la reserva
+
+            self.estado="confirmada"
             self.servicio.disponible=False
-            print("La reserva fue comfirmada de manera correcta")
+         
+
+          
 
         except ServicioNoDisponible as e:
-           print("Error:",e)
+            print("Error:",e)
+         
+        else:
+           
+           # Realizara la ejecución si no hubo errores 
+           print("La reserva fue confirmada correctamente")
+
+           #Registrar log
+           logger.registrar_evento(
+               f"Reserva {self.id_reserva} confirmada"
+                  ) 
+
+         
+        finally:
+             print("El proceso ha culminado")
+   def mostrar (self):
+      print(f"""
+          ID Reserva:{self.id_reserva}
+           Cliente :{self.cliente.nombre}
+           Servicio:{self.servicio.nombre}
+           Duración:{self.duracion}
+           Estado:{self.estado}
+           Fecha:{self.fecha}""")
+      
+#--------- Clase  cliente ----
+class Cliente :
+   def __init__(self,nombre):
+      self.nombre=nombre
+
+#  ------------ Clase servicio
+class Servicio:
+   def __init__(self,nombre):
+      self.nombre=nombre
+      self.disponible=True
 
 
 
