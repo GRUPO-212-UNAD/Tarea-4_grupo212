@@ -63,7 +63,7 @@ class Reserva:
       print(f"""
           ID Reserva:{self.id_reserva}
            Cliente :{self.cliente.get_nombre()}
-           Servicio:{self.servicio.nombre}
+           Servicio:{self.servicio.get_nombre()}
            Duración:{self.duracion}
            Estado:{self.estado}
            Fecha:{self.fecha}""")
