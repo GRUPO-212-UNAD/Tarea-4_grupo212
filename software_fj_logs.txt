@@ -1,0 +1,449 @@
+[2026-05-10 20:45:06] [------] 
+==================================================
+  INICIO DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 20:45:06] [------] 
+==================================================
+  OP 1: Registro cliente válido
+==================================================
+[2026-05-10 20:45:06] [------] 
+==================================================
+  OP 2: Cliente con correo inválido
+==================================================
+[2026-05-10 20:45:06] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 20:45:06] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 20:45:06] [------] 
+==================================================
+  OP 3: Cliente con nombre vacío
+==================================================
+[2026-05-10 20:45:06] [ERROR] Error en Cliente: El nombre no puede estar vacío
+[2026-05-10 20:45:06] [ERROR] Error esperado: El nombre no puede estar vacío
+[2026-05-10 20:45:06] [------] 
+==================================================
+  OP 4: Crear servicios válidos
+==================================================
+[2026-05-10 20:45:06] [ERROR] Error: Can't instantiate abstract class ReservaSala without an implementation for abstract methods 'describir_servicio', 'validar_parametros'
+[2026-05-10 20:45:06] [------] 
+==================================================
+  OP 5: Calcular costos de servicios
+==================================================
+[2026-05-10 20:45:06] [ERROR] Error: name 'sala' is not defined
+[2026-05-10 20:45:06] [------] 
+==================================================
+  OP 6: Reserva exitosa
+==================================================
+[2026-05-10 20:45:06] [ERROR] Error: name 'sala' is not defined
+[2026-05-10 20:45:06] [------] 
+==================================================
+  OP 7: Reserva servicio no disponible
+==================================================
+[2026-05-10 20:45:06] [ERROR] Error esperado: name 'sala' is not defined
+[2026-05-10 20:45:06] [------] 
+==================================================
+  OP 8: Servicio con precio inválido
+==================================================
+[2026-05-10 20:45:06] [ERROR] Error esperado: Can't instantiate abstract class ReservaSala without an implementation for abstract methods 'describir_servicio', 'validar_parametros'
+[2026-05-10 20:45:06] [------] 
+==================================================
+  OP 9: Calcular costo con horas inválidas
+==================================================
+[2026-05-10 20:45:06] [ERROR] Error esperado: name 'equipo' is not defined
+[2026-05-10 20:45:06] [------] 
+==================================================
+  OP 10: Actualizar datos de cliente
+==================================================
+[2026-05-10 20:45:06] [EVENTO] Nombre actualizado: Ana García Actualizada
+[2026-05-10 20:45:06] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 20:45:06] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 20:45:06] [------] 
+==================================================
+  FIN DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 20:55:59] [------] 
+==================================================
+  INICIO DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 20:55:59] [------] 
+==================================================
+  OP 1: Registro cliente válido
+==================================================
+[2026-05-10 20:55:59] [------] 
+==================================================
+  OP 2: Cliente con correo inválido
+==================================================
+[2026-05-10 20:55:59] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 20:55:59] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 20:55:59] [------] 
+==================================================
+  OP 3: Cliente con nombre vacío
+==================================================
+[2026-05-10 20:55:59] [ERROR] Error en Cliente: El nombre no puede estar vacío
+[2026-05-10 20:55:59] [ERROR] Error esperado: El nombre no puede estar vacío
+[2026-05-10 20:55:59] [------] 
+==================================================
+  OP 4: Crear servicios válidos
+==================================================
+[2026-05-10 20:55:59] [EVENTO] Servicios creados correctamente
+[2026-05-10 20:55:59] [------] 
+==================================================
+  OP 5: Calcular costos de servicios
+==================================================
+[2026-05-10 20:55:59] [ERROR] Error en ReservaSala.calcular_costo: 'ReservaSala' object has no attribute 'disponible'
+[2026-05-10 20:55:59] [ERROR] Error: 'ReservaSala' object has no attribute 'disponible'
+[2026-05-10 20:55:59] [------] 
+==================================================
+  OP 6: Reserva exitosa
+==================================================
+[2026-05-10 20:55:59] [ERROR] Error: 'Reserva' object has no attribute 'confirmar'
+[2026-05-10 20:55:59] [------] 
+==================================================
+  OP 7: Reserva servicio no disponible
+==================================================
+[2026-05-10 20:55:59] [ERROR] Error esperado: 'Reserva' object has no attribute 'confirmar'
+[2026-05-10 20:55:59] [------] 
+==================================================
+  OP 8: Servicio con precio inválido
+==================================================
+[2026-05-10 20:55:59] [ERROR] Error esperado: El precio debe ser mayor a 0
+[2026-05-10 20:55:59] [------] 
+==================================================
+  OP 9: Calcular costo con horas inválidas
+==================================================
+[2026-05-10 20:55:59] [ERROR] Error en AlquilerEquipo.calcular_costo: 'AlquilerEquipo' object has no attribute 'disponible'
+[2026-05-10 20:55:59] [ERROR] Error esperado: 'AlquilerEquipo' object has no attribute 'disponible'
+[2026-05-10 20:55:59] [------] 
+==================================================
+  OP 10: Actualizar datos de cliente
+==================================================
+[2026-05-10 20:55:59] [EVENTO] Nombre actualizado: Ana García Actualizada
+[2026-05-10 20:55:59] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 20:55:59] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 20:55:59] [------] 
+==================================================
+  FIN DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 21:15:15] [------] 
+==================================================
+  INICIO DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 21:15:15] [------] 
+==================================================
+  OP 1: Registro cliente válido
+==================================================
+[2026-05-10 21:15:15] [------] 
+==================================================
+  OP 2: Cliente con correo inválido
+==================================================
+[2026-05-10 21:15:15] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 21:15:15] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 21:15:15] [------] 
+==================================================
+  OP 3: Cliente con nombre vacío
+==================================================
+[2026-05-10 21:15:15] [ERROR] Error en Cliente: El nombre no puede estar vacío
+[2026-05-10 21:15:15] [ERROR] Error esperado: El nombre no puede estar vacío
+[2026-05-10 21:15:15] [------] 
+==================================================
+  OP 4: Crear servicios válidos
+==================================================
+[2026-05-10 21:15:15] [EVENTO] Servicios creados correctamente
+[2026-05-10 21:15:15] [------] 
+==================================================
+  OP 5: Calcular costos de servicios
+==================================================
+[2026-05-10 21:15:15] [EVENTO] Costo sala 3h: $150
+[2026-05-10 21:15:15] [EVENTO] Costo equipo 5 dias: $150
+[2026-05-10 21:15:15] [EVENTO] Costo asesoria 2h con descuento: $180.0
+[2026-05-10 21:15:15] [------] 
+==================================================
+  OP 6: Reserva exitosa
+==================================================
+[2026-05-10 21:15:15] [ERROR] Error: 'Reserva' object has no attribute 'confirmar'
+[2026-05-10 21:15:15] [------] 
+==================================================
+  OP 7: Reserva servicio no disponible
+==================================================
+[2026-05-10 21:15:15] [ERROR] Error esperado: 'Reserva' object has no attribute 'confirmar'
+[2026-05-10 21:15:15] [------] 
+==================================================
+  OP 8: Servicio con precio inválido
+==================================================
+[2026-05-10 21:15:15] [ERROR] Error esperado: El precio debe ser mayor a 0
+[2026-05-10 21:15:15] [------] 
+==================================================
+  OP 9: Calcular costo con horas inválidas
+==================================================
+[2026-05-10 21:15:15] [ERROR] AlquilerEquipo: días inválidos
+[2026-05-10 21:15:15] [ERROR] Error en AlquilerEquipo.calcular_costo: Días inválidos para alquiler de equipo
+[2026-05-10 21:15:15] [ERROR] Error esperado: Días inválidos para alquiler de equipo
+[2026-05-10 21:15:15] [------] 
+==================================================
+  OP 10: Actualizar datos de cliente
+==================================================
+[2026-05-10 21:15:15] [EVENTO] Nombre actualizado: Ana García Actualizada
+[2026-05-10 21:15:15] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 21:15:15] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 21:15:15] [------] 
+==================================================
+  FIN DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 21:16:55] [------] 
+==================================================
+  INICIO DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 21:16:55] [------] 
+==================================================
+  OP 1: Registro cliente válido
+==================================================
+[2026-05-10 21:16:55] [------] 
+==================================================
+  OP 2: Cliente con correo inválido
+==================================================
+[2026-05-10 21:16:55] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 21:16:55] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 21:16:55] [------] 
+==================================================
+  OP 3: Cliente con nombre vacío
+==================================================
+[2026-05-10 21:16:55] [ERROR] Error en Cliente: El nombre no puede estar vacío
+[2026-05-10 21:16:55] [ERROR] Error esperado: El nombre no puede estar vacío
+[2026-05-10 21:16:55] [------] 
+==================================================
+  OP 4: Crear servicios válidos
+==================================================
+[2026-05-10 21:16:55] [EVENTO] Servicios creados correctamente
+[2026-05-10 21:16:55] [------] 
+==================================================
+  OP 5: Calcular costos de servicios
+==================================================
+[2026-05-10 21:16:55] [EVENTO] Costo sala 3h: $150
+[2026-05-10 21:16:55] [EVENTO] Costo equipo 5 dias: $150
+[2026-05-10 21:16:55] [EVENTO] Costo asesoria 2h con descuento: $180.0
+[2026-05-10 21:16:55] [------] 
+==================================================
+  OP 6: Reserva exitosa
+==================================================
+[2026-05-10 21:16:55] [ERROR] Error: 'Reserva' object has no attribute 'confirmar'
+[2026-05-10 21:16:55] [------] 
+==================================================
+  OP 7: Reserva servicio no disponible
+==================================================
+[2026-05-10 21:16:55] [ERROR] Error esperado: 'Reserva' object has no attribute 'confirmar'
+[2026-05-10 21:16:55] [------] 
+==================================================
+  OP 8: Servicio con precio inválido
+==================================================
+[2026-05-10 21:16:55] [ERROR] Error esperado: El precio debe ser mayor a 0
+[2026-05-10 21:16:55] [------] 
+==================================================
+  OP 9: Calcular costo con horas inválidas
+==================================================
+[2026-05-10 21:16:55] [ERROR] AlquilerEquipo: días inválidos
+[2026-05-10 21:16:55] [ERROR] Error en AlquilerEquipo.calcular_costo: Días inválidos para alquiler de equipo
+[2026-05-10 21:16:55] [ERROR] Error esperado: Días inválidos para alquiler de equipo
+[2026-05-10 21:16:55] [------] 
+==================================================
+  OP 10: Actualizar datos de cliente
+==================================================
+[2026-05-10 21:16:55] [EVENTO] Nombre actualizado: Ana García Actualizada
+[2026-05-10 21:16:55] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 21:16:55] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 21:16:55] [------] 
+==================================================
+  FIN DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 21:17:50] [------] 
+==================================================
+  INICIO DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 21:17:50] [------] 
+==================================================
+  OP 1: Registro cliente válido
+==================================================
+[2026-05-10 21:17:50] [------] 
+==================================================
+  OP 2: Cliente con correo inválido
+==================================================
+[2026-05-10 21:17:50] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 21:17:50] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 21:17:50] [------] 
+==================================================
+  OP 3: Cliente con nombre vacío
+==================================================
+[2026-05-10 21:17:50] [ERROR] Error en Cliente: El nombre no puede estar vacío
+[2026-05-10 21:17:50] [ERROR] Error esperado: El nombre no puede estar vacío
+[2026-05-10 21:17:50] [------] 
+==================================================
+  OP 4: Crear servicios válidos
+==================================================
+[2026-05-10 21:17:50] [EVENTO] Servicios creados correctamente
+[2026-05-10 21:17:50] [------] 
+==================================================
+  OP 5: Calcular costos de servicios
+==================================================
+[2026-05-10 21:17:50] [EVENTO] Costo sala 3h: $150
+[2026-05-10 21:17:50] [EVENTO] Costo equipo 5 dias: $150
+[2026-05-10 21:17:50] [EVENTO] Costo asesoria 2h con descuento: $180.0
+[2026-05-10 21:17:50] [------] 
+==================================================
+  OP 6: Reserva exitosa
+==================================================
+[2026-05-10 21:17:50] [EVENTO] Reserva 1 creada exitosamente
+[2026-05-10 21:17:50] [------] 
+==================================================
+  OP 7: Reserva servicio no disponible
+==================================================
+[2026-05-10 21:17:50] [EVENTO] Reserva 2 creada
+[2026-05-10 21:17:50] [------] 
+==================================================
+  OP 8: Servicio con precio inválido
+==================================================
+[2026-05-10 21:17:50] [ERROR] Error esperado: El precio debe ser mayor a 0
+[2026-05-10 21:17:50] [------] 
+==================================================
+  OP 9: Calcular costo con horas inválidas
+==================================================
+[2026-05-10 21:17:50] [ERROR] AlquilerEquipo: días inválidos
+[2026-05-10 21:17:50] [ERROR] Error en AlquilerEquipo.calcular_costo: Días inválidos para alquiler de equipo
+[2026-05-10 21:17:50] [ERROR] Error esperado: Días inválidos para alquiler de equipo
+[2026-05-10 21:17:50] [------] 
+==================================================
+  OP 10: Actualizar datos de cliente
+==================================================
+[2026-05-10 21:17:50] [EVENTO] Nombre actualizado: Ana García Actualizada
+[2026-05-10 21:17:50] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 21:17:50] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 21:17:50] [------] 
+==================================================
+  FIN DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 21:45:22] [------] 
+==================================================
+  INICIO DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 21:45:22] [------] 
+==================================================
+  OP 1: Registro cliente válido
+==================================================
+[2026-05-10 21:45:22] [------] 
+==================================================
+  OP 2: Cliente con correo inválido
+==================================================
+[2026-05-10 21:45:22] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 21:45:22] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 21:45:22] [------] 
+==================================================
+  OP 3: Cliente con nombre vacío
+==================================================
+[2026-05-10 21:45:22] [ERROR] Error en Cliente: El nombre no puede estar vacío
+[2026-05-10 21:45:22] [ERROR] Error esperado: El nombre no puede estar vacío
+[2026-05-10 21:45:22] [------] 
+==================================================
+  OP 4: Crear servicios válidos
+==================================================
+[2026-05-10 21:45:22] [EVENTO] Servicios creados correctamente
+[2026-05-10 21:45:22] [------] 
+==================================================
+  OP 5: Calcular costos de servicios
+==================================================
+[2026-05-10 21:45:22] [EVENTO] Costo sala 3h: $150
+[2026-05-10 21:45:22] [EVENTO] Costo equipo 5 dias: $150
+[2026-05-10 21:45:22] [EVENTO] Costo asesoria 2h con descuento: $180.0
+[2026-05-10 21:45:22] [------] 
+==================================================
+  OP 6: Reserva exitosa
+==================================================
+[2026-05-10 21:45:22] [ERROR] Error: 'Reserva' object has no attribute 'confirmar'
+[2026-05-10 21:45:22] [------] 
+==================================================
+  OP 7: Reserva servicio no disponible
+==================================================
+[2026-05-10 21:45:22] [ERROR] Error: 'Reserva' object has no attribute 'confirmar'
+[2026-05-10 21:45:22] [------] 
+==================================================
+  OP 8: Servicio con precio inválido
+==================================================
+[2026-05-10 21:45:22] [ERROR] Error esperado: El precio debe ser mayor a 0
+[2026-05-10 21:45:22] [------] 
+==================================================
+  OP 9: Calcular costo con horas inválidas
+==================================================
+[2026-05-10 21:45:22] [ERROR] AlquilerEquipo: días inválidos
+[2026-05-10 21:45:22] [ERROR] Error en AlquilerEquipo.calcular_costo: Días inválidos para alquiler de equipo
+[2026-05-10 21:45:22] [ERROR] Error esperado: Días inválidos para alquiler de equipo
+[2026-05-10 21:45:22] [------] 
+==================================================
+  OP 10: Actualizar datos de cliente
+==================================================
+[2026-05-10 21:45:22] [EVENTO] Nombre actualizado: Ana García Actualizada
+[2026-05-10 21:45:22] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 21:45:22] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 21:45:22] [------] 
+==================================================
+  FIN DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 21:50:53] [------] 
+==================================================
+  INICIO DEL SISTEMA SOFTWARE FJ
+==================================================
+[2026-05-10 21:50:53] [------] 
+==================================================
+  OP 1: Registro cliente válido
+==================================================
+[2026-05-10 21:50:53] [------] 
+==================================================
+  OP 2: Cliente con correo inválido
+==================================================
+[2026-05-10 21:50:53] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 21:50:53] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 21:50:53] [------] 
+==================================================
+  OP 3: Cliente con nombre vacío
+==================================================
+[2026-05-10 21:50:53] [ERROR] Error en Cliente: El nombre no puede estar vacío
+[2026-05-10 21:50:53] [ERROR] Error esperado: El nombre no puede estar vacío
+[2026-05-10 21:50:53] [------] 
+==================================================
+  OP 4: Crear servicios válidos
+==================================================
+[2026-05-10 21:50:53] [EVENTO] Servicios creados correctamente
+[2026-05-10 21:50:53] [------] 
+==================================================
+  OP 5: Calcular costos de servicios
+==================================================
+[2026-05-10 21:50:53] [EVENTO] Costo sala 3h: $150
+[2026-05-10 21:50:53] [EVENTO] Costo equipo 5 dias: $150
+[2026-05-10 21:50:53] [EVENTO] Costo asesoria 2h con descuento: $180.0
+[2026-05-10 21:50:53] [------] 
+==================================================
+  OP 6: Reserva exitosa
+==================================================
+[2026-05-10 21:50:53] [EVENTO] Reserva 1 confirmada
+[2026-05-10 21:50:53] [------] 
+==================================================
+  OP 7: Reserva servicio no disponible
+==================================================
+[2026-05-10 21:50:53] [ERROR] Reserva 2: El servicio no se encuentra disponible
+[2026-05-10 21:50:53] [------] 
+==================================================
+  OP 8: Servicio con precio inválido
+==================================================
+[2026-05-10 21:50:53] [ERROR] Error esperado: El precio debe ser mayor a 0
+[2026-05-10 21:50:53] [------] 
+==================================================
+  OP 9: Calcular costo con horas inválidas
+==================================================
+[2026-05-10 21:50:53] [ERROR] AlquilerEquipo: días inválidos
+[2026-05-10 21:50:53] [ERROR] Error en AlquilerEquipo.calcular_costo: Días inválidos para alquiler de equipo
+[2026-05-10 21:50:53] [ERROR] Error esperado: Días inválidos para alquiler de equipo
+[2026-05-10 21:50:53] [------] 
+==================================================
+  OP 10: Actualizar datos de cliente
+==================================================
+[2026-05-10 21:50:53] [EVENTO] Nombre actualizado: Ana García Actualizada
+[2026-05-10 21:50:53] [ERROR] Error en Cliente: Correo electrónico inválido
+[2026-05-10 21:50:53] [ERROR] Error esperado: Correo electrónico inválido
+[2026-05-10 21:50:53] [------] 
+==================================================
+  FIN DEL SISTEMA SOFTWARE FJ
+==================================================
