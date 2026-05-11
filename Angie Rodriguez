@@ -1,0 +1,87 @@
+from abc import ABC, abstractmethod
+import logging
+
+logging.basicConfig(
+    filename="sistema.log",
+    level=logging.ERROR,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+
+# ===== EXCEPCIONES =====
+class ServicioError(Exception):
+    pass
+
+
+class ParametroInvalidoError(ServicioError):
+    pass
+
+
+class ServicioNoDisponibleError(ServicioError):
+    pass
+
+
+# ===== CLASE ABSTRACTA =====
+class Servicio(ABC):
+
+    def __init__(self, codigo, nombre, precio, disponible=True):
+        try:
+            if not codigo or not nombre:
+                raise ParametroInvalidoError("Código y nombre son obligatorios")
+
+            if precio <= 0:
+                raise ParametroInvalidoError("El precio debe ser mayor a 0")
+
+            self.__codigo = codigo
+            self.__nombre = nombre
+            self.__precio = precio
+            self.__disponible = disponible
+
+        except Exception as e:
+            logging.error(f"Error al crear servicio: {e}")
+            raise
+
+    # ===== GETTERS =====
+    def get_codigo(self):
+        return self.__codigo
+
+    def get_nombre(self):
+        return self.__nombre
+
+    def get_precio(self):
+        return self.__precio
+
+    def esta_disponible(self):
+        return self.__disponible
+
+    # ===== SETTER =====
+    def set_disponible(self, estado):
+        self.__disponible = estado
+
+    # ===== VALIDACIONES =====
+    def _validar_disponibilidad(self):
+        if not self.__disponible:
+            raise ServicioNoDisponibleError("El servicio no está disponible")
+
+    def _validar_cantidad(self, cantidad):
+        if cantidad is None or cantidad <= 0:
+            raise ParametroInvalidoError("Cantidad inválida")
+
+    # ===== MÉTODOS ABSTRACTOS =====
+    @abstractmethod
+    def calcular_costo(self, cantidad, impuesto=0, descuento=0):
+        """
+        Sobrecarga con parámetros opcionales:
+        - calcular_costo(2)
+        - calcular_costo(2, impuesto=0.19)
+        - calcular_costo(2, impuesto=0.19, descuento=0.10)
+        """
+        pass
+
+    @abstractmethod
+    def describir_servicio(self):
+        pass
+
+    @abstractmethod
+    def validar_parametros(self, cantidad):
+        pass
